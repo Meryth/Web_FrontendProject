@@ -3,10 +3,8 @@ export function checkUsername() {
 
     if (username?.includes("/")) {
         let errorMessage = 'Username must not contain "/"!';
-        const p = document.createElement("p");
         const usernameError = document.getElementById("username_error");
-        p.textContent = errorMessage;
-        usernameError?.appendChild(p);
+        usernameError!.textContent = errorMessage;
     }
 }
 

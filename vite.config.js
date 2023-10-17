@@ -9,6 +9,8 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 login: resolve(__dirname, 'src/html/login.html'),
+                home: resolve(__dirname, 'src/html/home.html'),
+                about: resolve(__dirname, 'src/html/about.html')
             }
         }
     }
