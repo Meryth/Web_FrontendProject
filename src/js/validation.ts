@@ -9,8 +9,10 @@ export function checkEmail() {
         event.preventDefault()
         if (emailRegex.test(email.value)) {
             emailError!.textContent = ""
+            toggleSubmitDisabled(false)
         } else {
             emailError!.textContent = "Invalid Email!"
+            toggleSubmitDisabled(true)
         }
     })
 }
@@ -25,10 +27,17 @@ export function checkPhoneNumber() {
         event.preventDefault()
         if (phoneNumberRegex.test(phoneNumber.value)) {
             phoneNumberError!.textContent = ""
+            toggleSubmitDisabled(false)
         } else {
             phoneNumberError!.textContent = "Invalid Phone Number!"
+            toggleSubmitDisabled(true)
         }
     })
+}
+
+export function toggleSubmitDisabled(disabled: boolean) {
+    let submitButton = (<HTMLInputElement>document.getElementById("submit_btn"))
+    submitButton.disabled = disabled
 }
 
 checkEmail()
