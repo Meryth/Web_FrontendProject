@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <script type="module" src="../js/validation.ts"></script>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/pico.min.css">
 </head>
 <body>
+<main class="container">
 <form method="post">
-    <label for="username">Username</label><br>
-    <input id="username" type="text" name="username" required autofocus><br>
+        <label for="username">Username</label><br>
+        <input id="username" type="text" name="username" required autofocus><br>
 
-    <label for="password">Password</label><br>
-    <input id="password" type="password" name="password" required><br>
+        <label for="password">Password</label><br>
+        <input id="password" type="password" name="password" required><br>
 
-    <label for="phone_nr">Phone number</label><br>
-    <input id="phone_nr" type="number" name="phone_nr"><br>
-    <p id="phone_nr_error"></p>
+        <label for="phone_nr">Phone number</label><br>
+        <input id="phone_nr" type="number" name="phone_nr"><br>
+        <p id="phone_nr_error"></p>
 
-    <label for="email">E-Mail address</label><br>
-    <input id="email" type="email" name="email" placeholder="max@mustermann.com" required><br>
-    <p id="email_error"></p>
+        <label for="email">E-Mail address</label><br>
+        <input id="email" type="email" name="email" placeholder="max@mustermann.com" required><br>
+        <p id="email_error"></p>
 
-    <input id="submit_btn" type="submit" value="Submit">
-</form>
+        <input id="submit_btn" type="submit" value="Submit">
+    </form>
+</main>
 </body>
 </html>
