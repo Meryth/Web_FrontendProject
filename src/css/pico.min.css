@@ -9,7 +9,7 @@
     --font-weight: 400;
     --font-size: 16px;
     --border-radius: 0.25rem;
-    --border-width: 1px;
+    --border-width: 3px;
     --outline-width: 3px;
     --spacing: 1rem;
     --typography-spacing-vertical: 1.5rem;
@@ -1566,7 +1566,7 @@ input:not([type=checkbox],[type=radio],[type=range],[type=file])[type=search][ar
 
 td, th {
     padding: calc(var(--spacing) / 2) var(--spacing);
-    border-bottom: var(--border-width) solid var(--table-border-color);
+    border: var(--border-width) solid var(--table-border-color);
     color: var(--color);
     font-weight: var(--font-weight);
     font-size: var(--font-size);
