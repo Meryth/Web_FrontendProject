@@ -33,7 +33,7 @@ export class JokeManager {
         let c1 = row.insertCell(0)
         let c2 = row.insertCell(1)
 
-        c1.textContent = "Star"
+        c1.textContent = "#" + row.rowIndex
         c2.textContent = this.joke
         return this
     }
@@ -57,9 +57,9 @@ export class JokeManager {
 
     getNewJoke() {
         const generateJokeButton = document.getElementById("generate_joke_btn")
-        generateJokeButton!.addEventListener('click', event => {
+        generateJokeButton!.addEventListener('click', async event => {
             event.preventDefault()
-            void this.getRandomJoke()
+            await this.getRandomJoke()
         })
 
         return this
@@ -78,5 +78,7 @@ export class JokeManager {
 }
 
 const jokeManager = new JokeManager()
+
+void jokeManager.getRandomJoke()
 jokeManager.addJokeToFavs()
 jokeManager.getNewJoke()
