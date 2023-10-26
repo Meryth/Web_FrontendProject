@@ -33,7 +33,18 @@ export class JokeManager {
         let c1 = row.insertCell(0)
         let c2 = row.insertCell(1)
 
-        c1.textContent = "#" + row.rowIndex
+        let removeJokeButton = document.createElement("button")
+        removeJokeButton.id = "btn_remove_joke"
+        removeJokeButton.textContent = "REMOVE"
+
+        removeJokeButton.addEventListener('click', () => {
+            let selectedRow = removeJokeButton.closest('tr')
+            if (selectedRow) {
+                selectedRow.remove()
+            }
+        })
+
+        c1.appendChild(removeJokeButton)
         c2.textContent = this.joke
         return this
     }

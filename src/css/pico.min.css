@@ -2567,4 +2567,9 @@ a[aria-busy=true], button[aria-busy=true], input[type=button][aria-busy=true], i
     }
 }
 
+#btn_remove_joke {
+    width: fit-content;
+    margin-bottom: 0px;
+}
+
 /*# sourceMappingURL=pico.min.css.map */
