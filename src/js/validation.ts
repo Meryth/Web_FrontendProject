@@ -40,5 +40,16 @@ export function toggleSubmitDisabled(disabled: boolean) {
     submitButton.disabled = disabled
 }
 
+export function login() {
+    let submitButton = (<HTMLInputElement>document.getElementById("submit_btn"))
+    if (submitButton) {
+        submitButton.addEventListener('click', event => {
+            event.preventDefault()
+            location.href = "../html/home.html"
+        })
+    }
+}
+
 checkEmail()
 checkPhoneNumber()
+login()
