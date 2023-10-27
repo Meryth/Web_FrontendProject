@@ -4,6 +4,7 @@ import {defineConfig} from "vite";
 
 export default defineConfig({
     build: {
+        outDir: 'dist',
         minify: true,
         rollupOptions: {
             input: {
@@ -14,5 +15,6 @@ export default defineConfig({
             }
         }
     },
+    base: "/Web_FrontendProject"
     // config options
 })
