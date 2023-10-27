@@ -1,0 +1,12 @@
+name: Deployment Workflow
+
+on:
+   push:
+      branches: [main] # is triggered if push event in main branch occurs
+
+jobs:
+   test:
+     uses: ./.github/workflows/development.yml
+
+
+   
