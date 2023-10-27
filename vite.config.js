@@ -7,14 +7,12 @@ export default defineConfig({
         minify: true,
         rollupOptions: {
             input: {
+                main: resolve(__dirname, 'index.html'),
                 login: resolve(__dirname, 'src/html/login.html'),
                 home: resolve(__dirname, 'src/html/home.html'),
                 about: resolve(__dirname, 'src/html/about.html')
             }
         }
     },
-    server: {
-        open: 'src/html/login.html'
-    }
     // config options
 })
