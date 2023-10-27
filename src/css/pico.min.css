@@ -2572,4 +2572,8 @@ a[aria-busy=true], button[aria-busy=true], input[type=button][aria-busy=true], i
     margin-bottom: 0px;
 }
 
+#email_error, #phone_nr_error {
+    color: red;
+}
+
 /*# sourceMappingURL=pico.min.css.map */
