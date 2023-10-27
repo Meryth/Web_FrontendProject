@@ -36,6 +36,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: [test, build] 
       permissions:
+        id-token: write
         pages: write
       steps:
          - name: Setup github pages
