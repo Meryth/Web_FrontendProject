@@ -1,3 +1,5 @@
+import { checkInputWithRegex } from './regex-validation';
+
 export class ValidationManager {
   isInputValid: boolean;
 
@@ -13,12 +15,11 @@ export class ValidationManager {
   ) {
     inputElement.addEventListener('input', event => {
       event.preventDefault();
-      if (regex.test(inputElement.value)) {
+      this.isInputValid = checkInputWithRegex(inputElement.value, regex);
+      if (this.isInputValid) {
         errorElement!.textContent = '';
-        this.isInputValid = true;
       } else {
         errorElement!.textContent = errorText;
-        this.isInputValid = false;
       }
     });
     return this;
@@ -67,7 +68,6 @@ export class ValidationManager {
     return;
   }
 }
-
 
 export function toggleSubmitDisabled(disabled: boolean) {
   const submitButton = (<HTMLInputElement>document.getElementById('submit_btn'));
