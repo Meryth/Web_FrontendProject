@@ -9,7 +9,7 @@
 </head>
 <body>
 <main class='container'>
-  <form method='post'>
+  <form method='post' id='login_form'>
     <label for='username'>Username</label><br>
     <input id='username' type='text' name='username' required autofocus><br>
 
@@ -17,7 +17,7 @@
     <input id='password' type='password' name='password' required><br>
 
     <label for='phone_nr'>Phone number</label><br>
-    <input id='phone_nr' type='number' name='phone_nr'><br>
+    <input id='phone_nr' type='number' name='phone_nr' required><br>
     <p id='phone_nr_error'></p>
 
     <label for='email'>E-Mail address</label><br>
